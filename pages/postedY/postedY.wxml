@@ -1,0 +1,13 @@
+<navigator  
+   wx:for="{{yueba}}"
+   wx:key="appointmentId"
+   id="v{{item.type}}"
+   url="../Yintroduction/Yintroduction?appointmentId={{item.appointmentId}}" 
+   >
+    <text class="contentText"> 
+      {{item.title}}
+    </text>
+     <text class="timeText">
+       {{item.time}}
+     </text>
+   </navigator>

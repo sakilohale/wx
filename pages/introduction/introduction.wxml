@@ -1,0 +1,194 @@
+<view class="sale-container" bindtouchmove="hiddenComment">
+
+    <view class='detail-container' wx:if="{{card}}">
+
+        <!--header-container   只包括轮播墙照片       -->
+      <view class='header-container'>
+          <!--     -->
+        <view class='header-bg'></view>
+        <!-- 轮播图 -->
+          <swiper class='image-container' indicator-dots="true" indicator-color="#ffffff" indicator-active-color="#66CDAA">
+
+            <block wx:for="{{lunbo}}" wx:key="wallId">
+              <swiper-item class='image-item'>
+
+                <image mode='aspectFill' 
+                       src="{{item}}" 
+
+                     
+                        
+                       class="sale-image"></image>
+
+              </swiper-item>
+            </block>
+          </swiper>
+      </view>
+
+
+    <!--个人信息等等-->
+      <view class='info-container'>
+        <view class='name'>{{card.wall.username}}</view>
+        <view class='target'>我是来：{{card.wall.title}}</view>
+        <!-- <view class='gender'>{{card.wall.gender}}</view> -->
+        <!-- <view class='major'>专业：{{card.wall.major}}</view> -->
+        <view class='content'>*自我夸赞*：{{card.wall.content}}</view>
+        <view class='content'>自我标签：{{card.wall.label}}</view>
+      </view>
+
+
+     <!--评论按钮  和  点赞按钮-->
+    <view class='operate'>
+        <!-- 评论按钮 -->
+      <view class='share-button'>
+        <button   class='button' 
+                  style='border: white;'  
+                  bindtap='showCommentInput' 
+                  data-type='1'
+                
+                  >想聊聊qvq</button>
+      </view>
+      <!-- 喜欢（点赞）按钮 -->
+      <view class='collect  animated wobble' bindtap='follow' wx:if="{{canFollow}}">喜欢qwq</view>
+      <view class='collect2  animated tada' wx:else>冷静である!</view>
+       <view class="collect3"wx:if="{{show}}"><navigator url="/pages/user_info/user_info?userId={{card.wall.accountId}}">个人信息</navigator></view>
+      </view>
+    </view>
+
+
+
+
+
+
+    
+    <view class='comment-container' wx:if='{{card}}'>
+      <view class='comment-wall'>
+          <view class='comment-header'>
+
+            <!--点赞数-->
+            <view class='zan'>
+              {{praise_num}}喜欢
+            </view>
+
+
+            <!--删除按钮 需要验证身份来决定是否显现-->
+            <view class='zan' bindtap='deletewall' wx:if="{{can_delete}}">
+              <view style='padding-left:5rpx;'>删除</view>
+            </view>
+
+
+
+             <!--分享转发按钮-->
+            <view class='zan share-user-button'>
+              <button class='button' open-type="share" style='border: none;'>
+                分享转发
+              </button>
+            </view>
+
+
+              <!--评论数-->
+            <view class='comment'>
+              <view style='padding-left:5rpx;'>{{commentNum}}评论</view>
+            </view>
+          </view>
+      </view>
+
+
+
+        <!--评论区-->
+      <view class='user-comment'>
+           
+
+
+        <!--评论列表渲染-->
+        <view class='comment-item' 
+              wx:for="{{card.commentResponseList}}" 
+              wx:key="commentId">
+              <!--item为-commentList
+             左侧为头像--> 
+          <view class='left'>
+            <view class='user-image'>
+              <image src='{{item.comment.icon}}'></image>
+            </view>
+          </view>
+             <!--右侧为昵称，评论，再评论，时间标识-->
+          <view class='right'>
+            
+            <view class='comment-name right-item'>
+              <!--昵称-->
+                <view>{{item.comment.username}}</view>
+              
+               
+            </view>
+
+            <!--内容-->
+            <view class='content right-item'>
+              {{item.comment.content}}
+            </view>
+
+
+             
+            <view class='create_at right-item'>
+                <!--发表时间-->
+              <view>{{item.comment.gmtCreate}}</view>
+
+                <!--再评论-->
+              <view class='comment-icon'>
+                <image src='/image/comment.png' 
+                  bindtap='showCommentInput' 
+                  data-commentId="{{item.comment.commentId}}"
+                   
+                  data-replyUserId="{{item.comment.accountId}}"
+                  data-type='2'
+                  ></image>
+              </view>
+            </view>
+
+
+           
+                <view class='comment-user-wall' 
+                      wx:if='{{item.replyList.length > 0}}'>
+
+                  <view class="qipao"></view>
+
+                  <view class='comment-user-container' 
+                        wx:for="{{item.replyList}}" 
+                        wx:key="replyId" 
+                        wx:for-item="sub">
+
+                      <view class='comment-wall-item' 
+                            wx:if="{{sub.content}}" 
+                             bindtap="{{deleteComment}}">
+
+                            <view class='comment-user-container'>
+                              <view class="comment-user inline-item">
+                                {{sub.username}}：
+                              </view>
+
+                              <view class='inline-item'>{{sub.content}}</view>
+                              
+                            </view>
+                        </view>
+
+                      
+                  </view>                    
+                </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+  <!--评论输入窗口-->
+  <view class='comment-input-container' wx:if="{{showCommentInput}}">
+    <textarea 
+        maxlength="1024"
+        placeholder="评论" 
+        auto-focus 
+        cursor-spacing="15"
+        fixed="true"
+        auto-height 
+        bindinput='getCommentContent'></textarea>
+    <view class='send-button' bindtap='postComment'><view>发送</view></view>
+  </view>

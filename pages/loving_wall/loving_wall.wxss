@@ -1,0 +1,182 @@
+@import "/util/animate.wxss";
+Page {
+  width: 100%;
+  height: 100%;
+}
+
+.index_swiper {
+  background-color: white;
+  /* background-image: url("https://ae01.alicdn.com/kf/H733e9cc2773943dca6c69aa220ef9ab1R.jpg"); */
+}
+.index_swiper swiper {
+  width: 700rpx;
+  /*屏幕默认宽100%*/
+  height: 340rpx;
+  /*image默认高*/
+  margin: auto;
+}
+.index_swiper swiper image {
+  width: 100%;
+}
+.card {
+  margin-top: 40rpx;
+  height: 300rpx;
+  background-image: url("https://ae01.alicdn.com/kf/Hb79318e3831f4ca9a7f8810f20da151ad.jpg");
+  display: flex;
+  
+/* background-image: url("https://ae01.alicdn.com/kf/H3ddb5f3ea7f74d8b8bbd2e5c450e332ck.jpg");  */
+}
+.card .dataline {
+  position: relative;
+  bottom: 10rpx;
+  right:70rpx;
+  margin-top: 20rpx;
+  width: 60rpx;
+  height: 250rpx;
+  background: #e1eec3;
+     /* 立体红       
+  
+  background: -webkit-linear-gradient(to left, #f05053, #e1eec3);
+ 
+  background: linear-gradient(to left, #f05053, #e1eec3);
+  
+  box-shadow: -5px 5px 0px #663333, 5px -5px 0px #ffcdcd;*/
+
+
+/*       日系绿     */
+
+
+/* background: #359E6E; */
+background: white;
+
+
+
+
+
+
+  margin: auto;
+  border-radius: 80rpx;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.card .dataline image{
+width: 40rpx;
+height: 40rpx;
+
+}
+.like_num{
+  margin-top: 15rpx;
+font-size: 30rpx;
+color: brown;
+}
+.comment_num{
+  margin-top: 15rpx;
+  font-size: 30rpx;
+  color: brown;
+
+}
+.time{
+  font-size: 20rpx;
+  color: black;
+  
+
+}
+
+.card .wallcard {
+   margin-left: 50rpx;
+  display: flex;
+  height: 300rpx;
+  width: 700rpx;
+
+  /*              日系绿             */
+   background: white;
+  /*background: #9BE0B7; */
+
+  align-items: center;
+
+    
+}
+.card .wallcard .cardimg {
+  width: 280rpx;
+  height: 300rpx;
+  border-right: black 5rpx ;
+  line-height: 300rpx;
+}
+.card .wallcard .cardimg .imgborder {
+  margin: auto;
+  margin-top: 25rpx;
+  width: 250rpx;
+  height:250rpx ;
+}
+.card .wallcard .cardimg .imgborder .image {
+  background: lightgrey;
+  width: 80%;
+  height: 80%;
+}
+.card .wallcard .introdution {
+  width: 300rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+width: 200rpx;
+height: 70rpx;
+font-size: 40rpx;
+color:grey;
+
+}
+.content{
+  margin-top: 10rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 200rpx;
+  height: 75rpx;
+font-size: 30rpx;
+color:black;
+
+}
+.mood{
+  margin-top: 20rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+width: 200rpx;
+height: 90rpx;
+  font-size:25rpx;
+color: black;
+
+}
+.send {
+  position: fixed;
+  right: 18rpx;
+  bottom: 20rpx;
+  z-index: 100;
+  width: 120prx;
+  height: 120prx;
+}
+.send image {
+  width: 120rpx;
+  height: 120rpx;
+  position: relative;
+  z-index: 110;
+  border-radius: 50%;
+}
+.send .wall {
+  position: absolute;
+  z-index: 105;
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 45rpx;
+  background: white;
+  right: 10rpx;
+  bottom: 30rpx;
+}

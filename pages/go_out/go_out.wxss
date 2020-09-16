@@ -1,0 +1,41 @@
+
+
+
+.send {
+  position: fixed;
+  right: 18rpx;
+  bottom: 150rpx;
+  z-index: 100;
+  width: 120rpx;
+  height: 120rpx;
+}
+.send image {
+  width: 120rpx;
+  height: 120rpx;
+  position: relative;
+  z-index: 110;
+  border-radius: 50%;
+}
+.send .wall {
+  position: absolute;
+  z-index: 105;
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 45rpx;
+  background: white;
+  right: 10rpx;
+  bottom: 30rpx;
+}
+.search_input {
+  height: 90rpx;
+  padding: 10rpx;
+  background: white;
+  color: black;
+  font-size: 30rpx;
+  text-align: center;
+}
+.search_input image{
+height: 90rpx;
+width: 300rpx;
+
+}

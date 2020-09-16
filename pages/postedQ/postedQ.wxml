@@ -1,0 +1,48 @@
+<view class='user-comment'>
+<navigator class='comment-item' 
+              wx:for="{{wall}}" 
+              wx:key="wallId"
+              url="../introduction/introduction?wd={{item.wallId}}"
+              >
+              <!--item为-commentList
+             左侧为头像--> 
+          <view class='left'>
+            <view class='user-image'>
+              <image src='/image/hat.png'></image>
+            </view>
+          </view>
+             <!--右侧为昵称，评论，再评论，时间标识-->
+          <view class='right'>
+            
+            <view class='comment-name right-item'>
+              <!--昵称-->
+                <view>{{item.username}}</view>
+              
+                <!--私信功能（只有发表者有权限私信）-->
+              
+              <!-- <image class='letter-image'
+                      bindtap='letter'
+                      wx:if="{{card.can_chat==true && param==true}}"
+                      data-obj="{{item.commenter.id}}"
+                      data-chat="1" 
+                      src='/image/letter.png'></image> -->
+            </view>
+
+            <!--内容-->
+            <view class='content right-item'>
+              {{item.content}}
+            </view>
+
+
+             
+            <view class='create_at right-item'>
+                <!--发表时间-->
+              <view>{{item.gmtCreate}}</view>
+              <view>{{item.replyNum}}</view>
+              <view>{{item.likeNum}}</view>
+
+              </view>
+              </view>
+            </navigator>
+
+</view>

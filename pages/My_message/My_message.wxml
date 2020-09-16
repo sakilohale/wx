@@ -1,0 +1,94 @@
+<view class="message_container">
+<view class="icon">
+    <image src="/image/person1.png"></image>
+</view>
+<view class="name">
+    <textarea class="textarea" value="{{selfinfo.userInfo.username}}" placeholder="姓名"   maxlength="140" auto-focus="false" focus="false" auto-height="" 
+    bindinput="getname"></textarea>
+</view>
+
+<!--gender-->
+
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="text" >
+      性别：{{array[index]}}
+    </view>
+    
+  </picker>
+
+
+
+<!--age-->
+<view class="data">
+   <view class="text">年龄:</view>
+<textarea class="textarea" value="{{selfinfo.userInfo.age}}" placeholder="填写你的芳龄"   maxlength="140" auto-focus="false" focus="false" auto-height="" 
+    bindinput="getage">
+    
+</textarea>
+</view>
+
+
+<!--email-->
+<view class="data">
+   <view class="text">email:</view>
+<textarea class="textarea" value="{{selfinfo.userInfo.email}}" placeholder="填写你的email"   maxlength="140" auto-focus="false" focus="false" auto-height="" 
+    bindinput="getemail">
+    
+</textarea>
+</view>
+<!--QQ-->
+<view class="data">
+    <view class="text">QQ:</view>
+    <textarea class="textarea" value="{{selfinfo.userInfo.qqNumber}}" placeholder="填写你的QQ号"   maxlength="140" auto-focus="false" focus="false" auto-height="" 
+        bindinput="getqq">
+        
+    </textarea>
+</view>
+
+
+
+
+<!--telephone-->
+<view class="data">
+    <view class="text">电话:</view>
+    <textarea class="textarea" value="{{selfinfo.userInfo.telephone}}" placeholder="填写你的联系方式"   maxlength="140" auto-focus="false" focus="false" auto-height="" 
+        bindinput="getphone">
+        
+    </textarea>
+</view>
+
+<!--hometown-->
+<view class="data">
+    <view class="text">家乡:</view>
+    <textarea class="textarea" value="{{selfinfo.userInfo.hometown}}" placeholder="你的家乡"   maxlength="140" auto-focus="false" focus="false" auto-height="" 
+        bindinput="gethome">
+        
+    </textarea>
+</view>
+
+
+
+<!--个人介绍-->
+<view class="data_content">
+    <view class="text">个人介绍:</view>
+    <textarea class="textarea_content" value="{{selfinfo.userInfo.personIntroduction}}" placeholder="介绍一下自己把"   maxlength="140" auto-focus="false" focus="false" auto-height="" 
+        bindinput="getintro">
+        
+    </textarea>
+</view>
+
+
+
+
+
+
+<button  size="small" bindtap="submit" >
+    提交修改
+</button>
+
+
+
+
+
+
+</view>

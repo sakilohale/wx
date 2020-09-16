@@ -1,0 +1,4 @@
+{
+  "usingComponents": {"Tabs":"../../components/Tabs/Tabs", "messagebar":"../../components/messagebar/messagebar"},
+  "navigationBarBackgroundColor": "#ffffff"
+}

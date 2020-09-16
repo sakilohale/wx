@@ -1,0 +1,90 @@
+.message_container{
+
+  display: flex;
+  align-items: center;
+ flex-direction: column;
+}
+.text{
+
+font-size:35rpx;
+
+margin-left: 20rpx;
+margin-bottom: 20rpx;
+
+}
+.textarea{
+    font-size: 35rpx;
+    height: 100rpx;
+    text-overflow: ellipsis;
+    font-family: cursive;
+    color: lightsteelblue;
+}
+.textarea_content{
+    font-size: 35rpx;
+    height: 400rpx;
+    font-family: cursive;
+    color: lightsteelblue;
+
+}
+.icon{
+ 
+ height: 150rpx;
+ width: 150rpx; 
+ margin-top: 20rpx;
+ margin-bottom: 20rpx;
+border-radius: 50%;
+}
+.icon image{
+
+width: 100%;
+height: 100%;
+
+
+}
+.name{
+    
+  font-size:40rpx;
+  text-align: center;
+
+}
+.gender{
+margin-top: 10rpx;
+font-size: 40rpx;
+text-align: center;
+
+}
+.age{
+    margin-top: 10rpx;
+    font-size: 35rpx;
+    text-align: center;
+}
+.data{
+
+display: flex;
+flex-direction: column;
+border-top: lightgrey 1px solid;
+border-bottom: lightgrey 1px solid;
+
+margin-left: 50rpx;
+
+width: 100%;
+height: 150rpx;
+}
+.data_content{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50rpx;
+    margin-top: 30rpx;
+    width: 100%;
+    height: 400rpx;
+
+
+
+}
+
+button{
+    position: relative;
+    bottom: 40rpx;
+    background-color: black;
+    color: white;
+}

@@ -1,0 +1,13 @@
+<view class="search_input"><image src="/image/welcome1.png"></image></view>
+<Tabs tabs="{{tabs}}" Sports="{{Sports}}" Dinner="{{Dinner}}" Study="{{Study}}" Travel="{{Travel}}" Other="{{Other}}"  bindtabsItemChange="handletabsItemChange">
+
+</Tabs>
+<!--发送按钮标签-->
+<view class='send'>
+    <view class='wall'></view>
+    <view class='post'>
+      <image src='信封.png' bindtap='send'></image>
+    </view>
+  </view>
+  <!--发送按钮标签结束-->
+  

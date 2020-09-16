@@ -1,0 +1,63 @@
+<view class="message_container">
+    <view class="icon">
+        <image src="/image/person1.png"></image>
+    </view>
+    <view class="name">
+    {{info.username}}
+    </view>
+    
+    <!--gender-->
+    
+    
+        <view class="text">
+          性别：{{info.gender}}
+        </view>
+
+    
+    
+    
+    <!--age-->
+    <view class="data">
+       <view class="text">年龄:{{info.age}}</view>
+    
+    </view>
+    
+    
+    <!--email-->
+    <view class="data">
+       <view class="text">email:{{info.email}}</view>
+    
+    </view>
+    <!--QQ-->
+    <view class="data">
+        <view class="text">QQ:{{info.qqNumber}}</view>
+        
+    </view>
+    
+    
+    
+    
+    <!--telephone-->
+    <view class="data">
+        <view class="text">电话:{{info.telephone}}</view>
+        
+    </view>
+    
+    <!--hometown-->
+    <view class="data">
+        <view class="text">家乡:{{info.hometown}}</view>
+        
+    </view>
+    
+    
+    
+    <!--个人介绍-->
+    <view class="data_content">
+        <view class="text">个人介绍:{{info.personIntroduction}}</view>
+        
+    </view>
+    
+   
+        
+    </view>
+   

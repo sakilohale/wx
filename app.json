@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/loving_wall/loving_wall",
+    "pages/go_out/go_out",
+    "pages/my_info/my_info",
+    "pages/introduction/introduction",
+    "pages/Send/Send",
+    "pages/Sendyueba/Sendyueba",
+    "pages/postedQ/postedQ",
+    "pages/postedY/postedY",
+    "pages/Yintroduction/Yintroduction",
+    "pages/My_message/My_message",
+    "pages/user_info/user_info"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#359E6E",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#f9fffc",
+    "selectedColor": "#ff4848",
+    "backgroundColor": "#f9fffc",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/loving_wall/loving_wall",
+        "text": "表白墙",
+        "iconPath": "image/aixinNOT.png",
+        "selectedIconPath": "image/aixin.png"
+      },
+      {
+        "pagePath": "pages/go_out/go_out",
+        "text": "约吧",
+        "iconPath": "image/yuebaNOT.png",
+        "selectedIconPath": "image/yueba.png"
+      },
+      {
+        "pagePath": "pages/my_info/my_info",
+        "text": "家",
+        "iconPath": "image/homeNOT.png",
+        "selectedIconPath": "image/home.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

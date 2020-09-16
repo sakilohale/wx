@@ -1,0 +1,74 @@
+
+    <!--搜索框开始-->
+    <messagebar></messagebar>
+    <!--搜索框结束-->
+    <!--轮播图开始-->
+    <view class="index_swiper">
+      <!--  
+       1. swiper标签存在默认宽高：高150px，宽100%
+       2. 图片标签也存在默认宽高：高240px，宽320px
+       3. 通过原图的宽高来调整（例如高度自适应 宽度100%）,让swiper的高 变得和图片高一样
+       4. 图片标签的mode属性 渲染模式：widthFix（让图片的标签宽高 和图片标签的内容的狂傲都等比例发生变化）
+        -->
+    <swiper autoplay="true" indicator-dots="true" circular="true">
+    <swiper-item  wx:for="{{swiperList}}"  wx:key="item.wallId">
+      <navigator url="/pages/introduction/introduction?wd={{item.wallId}}">
+        <image src="{{item.hotImg}}" mode="widthFix">
+        </image>
+      </navigator>
+    </swiper-item>
+    </swiper>
+    </view>
+    <!--轮播图结束-->
+
+
+
+    <!--明信片标签开始-->
+
+<view class="card  animated flipInY"
+wx:for="{{wallcard}}"
+wx:key="wallId">
+<navigator class="wallcard" 
+url="/pages/introduction/introduction?wd={{item.wallId}}">
+  <!--发布的图片-->
+  <view class="cardimg">
+    <view class="imgborder">
+  <image mode="widthFix" src="{{item.img}}" class="image" lazy-load="true">
+  </image>
+</view>
+</view>
+  <!--发布的部分信息-->
+  <view class="introduction">
+    <view class="title">
+     {{item.title}}
+      
+    </view>
+  <view class="content">
+    {{item.content}}
+  </view>
+  <view class="mood">
+    {{item.label}}
+  </view>
+
+</view>
+
+</navigator>
+<view class="dataline">
+  <view class="like_num">{{item.likeNum}}<image   src="/image/aixin2.png"  lazy-load="true"></image></view>
+  <view class="comment_num">{{item.replyNum}}<image src="/image/comment2.png"  lazy-load="true"></image></view>
+
+</view>
+</view>
+<!--明信片标签结束-->
+
+
+
+
+<!--发送按钮标签-->
+<view class='send'>
+  <view class='wall'></view>
+  <view class='post'>
+    <image src='/image/send.png' bindtap='send'></image>
+  </view>
+</view>
+<!--发送按钮标签结束-->

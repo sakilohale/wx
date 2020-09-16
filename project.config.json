@@ -1,0 +1,112 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"scopeDataCheck": false,
+		"coverView": true,
+		"es6": true,
+		"postcss": true,
+		"compileHotReLoad": false,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"autoAudits": false,
+		"newFeature": true,
+		"uglifyFileName": false,
+		"uploadWithSourceMap": true,
+		"useIsolateContext": true,
+		"nodeModules": false,
+		"enhance": false,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false,
+		"showShadowRootInWxmlPanel": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.11.0",
+	"appid": "wxa7176c35bfb97606",
+	"projectname": "%E8%A1%A8%E7%99%BD%E5%A2%99",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "登陆页",
+					"pathName": "pages/my_info/my_info",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "introduction",
+					"pathName": "pages/introduction/introduction",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "约吧",
+					"pathName": "pages/go_out/go_out",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "SB",
+					"pathName": "pages/Sendyueba/Sendyueba",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "YI",
+					"pathName": "pages/Yintroduction/Yintroduction",
+					"query": "appointmentId=A1634187689",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人信息页",
+					"pathName": "pages/My_message/My_message",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

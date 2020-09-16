@@ -1,0 +1,180 @@
+<view class="tabs">
+    <view class="tabs_title">
+        <view class="tabs_item {{item.isActive?'active':''}}"
+        wx:for="{{tabs}}"
+        wx:key="id"
+        data-index="{{index}}"
+        bindtap="handleItem"
+        >
+         {{item.name}}
+        </view>
+    </view>
+    <view class="tabs_content">
+    
+
+    <block
+    wx:if="{{tabs[0].isActive}}"
+    >
+    <view class="page1">
+   <navigator 
+   class="Sports  animated jackInTheBox" 
+   url="../Yintroduction/Yintroduction?appointmentId={{item.appointmentId}}" 
+   wx:for="{{Sports}}"
+   wx:key="appointmentId"
+  
+   >
+    <view class="contentText">
+      {{item.title}}
+    </view>
+     <view class="timeText">
+          {{item.time}}
+     </view>
+   </navigator>
+
+
+   <!--green-->
+   <view class="bottom">
+    <image src="/image/cao.png"></image>
+    <image src="/image/flower.png"></image>
+    <image src="/image/cao.png"></image>
+    <image src="/image/cao.png"></image>
+    <image src="/image/flower.png"></image>
+    <image src="/image/cao.png"></image>
+  </view>
+
+
+
+
+
+
+
+  </view>
+
+    </block>
+
+    <block
+    wx:if="{{tabs[1].isActive}}"
+    >
+
+    <view class="page2">
+    <navigator class="Dinner animated rollIn" 
+   url="../Yintroduction/Yintroduction?appointmentId={{item.appointmentId}}" 
+   wx:for="{{Dinner}}"
+   wx:key="appointmentId"
+   
+   >
+    <view class="contentText">
+      {{item.title}}
+    </view>
+     <view class="timeText">
+       {{item.time}}
+     </view>
+   </navigator>
+
+  <!--Food-->
+  <view class="bottom1">
+    <image src="/image/bread.png"></image>
+    <image src="/image/cheess.png"></image>
+   
+    <image src="/image/chicken.png"></image>
+    <image src="/image/sushi.png"></image>
+    <image src="/image/suger.png"></image>
+  </view>
+
+
+
+  </view>
+
+    </block>
+
+
+    <block
+    wx:if="{{tabs[2].isActive}}"
+    >
+    <view class="page3">
+   <navigator class="Study animated zoomInLeft" 
+   url="../Yintroduction/Yintroduction?appointmentId={{item.appointmentId}}" 
+   wx:for="{{Study}}"
+   wx:key="appointmentId"
+   
+   >
+    <view class="contentText">
+      {{item.title}}
+    </view>
+     <text class="timeText">
+       {{item.time}}
+     </text>
+   </navigator>
+   <!--study-->
+
+   <view class="bottom1">
+    <image src="/image/math.png"></image>
+    <image src="/image/chinese.png"></image>
+   
+    <image src="/image/code.png"></image>
+    <image src="/image/chemical.png"></image>
+    <image src="/image/phy.png"></image>
+    
+  </view>
+
+
+  </view>
+
+  </block>
+
+
+    <block
+    wx:if="{{tabs[3].isActive}}"
+    >
+    <view class="page4">
+    <navigator class="Travel animated rotateIn" 
+    url="../Yintroduction/Yintroduction?appointmentId={{item.appointmentId}}" 
+    wx:for="{{Travel}}"
+    wx:key="appointmentId"
+    
+    >
+     <view class="contentText">
+       {{item.title}}
+     </view>
+      <text class="timeText">
+        {{item.time}}
+      </text>
+    </navigator>
+   <!--travel-->
+   <view class="bottom1">
+    <image src="/image/tower.png"></image>
+    <image src="/image/ftower.png"></image>
+    <image src="/image/xini.png"></image>
+    <image src="/image/fujiyama.png"></image>
+    <image src="/image/jinzita.png"></image>
+    <image src="/image/shanghai.png"></image>
+  </view>
+
+
+  </view>
+
+    </block>
+
+    <block
+    wx:if="{{tabs[4].isActive}}"
+    >
+    <view class="page9">
+    <navigator class="other animated zoomInDown" 
+    url="../Yintroduction/Yintroduction?appointmentId={{item.appointmentId}}" 
+    wx:for="{{Other}}"
+    wx:key="appointmentId"
+    
+    >
+     <view class="contentText">
+       {{item.title}}
+     </view>
+      <view class="timeText">
+        {{item.time}}
+      </view>
+    </navigator>
+  </view>
+  
+    </block>
+
+  </view>
+</view>

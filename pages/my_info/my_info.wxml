@@ -1,0 +1,54 @@
+
+<image class="backgroundimg" src="{{backgroundimg}}" mode="scaleToFill" bindtap="imgchange">  
+</image>
+
+<!--上半部分----登陆区域-->
+<view class="top_half">
+<!--登陆按钮-->
+<button wx:if="{{showLoginButton}}"  plain="true" open-type="getUserInfo" bindgetuserinfo="getAuthUserInfo">登陆</button>
+
+<!--头像昵称-->
+<view wx:else>
+<view >
+<image   src="{{userInfoimg}}"  class="logoself" bindtap="hiddenchange">
+</image>
+</view>
+<view class="text">
+  {{username}}
+</view>
+
+</view>
+</view>
+<!--权限按钮-->
+<view class='message  animated zoomInUp' bindtap='openselfinfo'>
+  <view><image src='/image/person.png' class='item-image'></image></view>
+  <view class='word'>个人信息</view>
+</view>
+
+<view class='content-container  animated zoomInUp'>
+  <view class='content-item' bindtap="bindpostedwall">
+    <view><image src='/image/aixin.png' class='item-image' ></image></view>
+    <view class='word'>表白墙</view>
+  </view>
+  <view class='content-item'  bindtap="bindpostedyueba">
+    <view><image src='/image/yueba.png' class='item-image'></image></view>
+    <view class='word'>约吧</view>
+  </view>
+</view>
+
+<view class='suggestion  animated zoomInUp' bindtap='openSugesstion' >
+  <view><image src='/image/suggestions.png' class='item-image'></image></view>
+  <view class='word'>联系客服</view>
+</view>
+
+<!--下半部分----显示区域-->
+<!-- <view class="{{Color?'bottom_half1':'bottom_half2'}}" bindtap="backColorChange" >
+  <image src="aixin.jpg"  class="aixin" mode="widthFix">
+  </image>
+       -->
+       <view  class="author"> 
+       <text  selectable="true">
+    {{username}}, 我们一起。。
+  </text>
+
+</view>  

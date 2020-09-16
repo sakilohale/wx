@@ -1,0 +1,153 @@
+@import "/util/animate.wxss";
+Page{
+  width: 100%;
+  height: 100%;
+ 
+    padding: 0rpx;
+    margin: 0rpx;
+  }
+
+button{
+width:100%;
+font-size: small;
+border: none;
+font-style: oblique;
+
+background-color: white;
+
+
+}
+.logoself{
+  margin: auto;
+  border-radius: 50%;  
+  align-self: center;
+  width: 200rpx;
+  height: 200rpx;
+  border-style: groove;
+}
+.text{
+font-size: 30rpx;
+text-align: center;
+}
+.aixin{
+    border-radius: 50%;  
+    width: 350rpx;
+    height: 350rpx;
+   
+
+}
+.nickname{
+font-size: 50rpx;
+font-style: italic;
+text-align: center;
+}
+.backgroundimg{
+    width: 100%;
+  height: 500rpx;
+}
+.top_half{
+ position: absolute;
+top:180rpx;
+left:125px
+
+}
+.bottom_half1{
+ height: 100%;
+  display: flex;
+  background: #076585;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.bottom_half2{
+  height: 100%;
+  display: flex;
+  background: #ee9ca7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+
+
+
+
+.word{
+  margin-left: 20rpx;
+
+}
+
+.letter image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 5rpx;
+}
+
+
+
+
+.content-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.message{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  background: white;
+  align-items: center;
+  margin-top: 15rpx;
+}
+
+.content-item{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  background: white;
+  align-items: center;
+}
+
+.item-image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 15rpx;
+  margin-left: 30rpx;
+}
+
+.word{
+  font-size: 30rpx;
+  margin-left: 30rpx;
+}
+
+.content-container{
+  width: 100%;
+  background: white;
+  margin-top: 15rpx;
+}
+
+.suggestion{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  background: white;
+  align-items: center;
+  margin-top: 15rpx;
+}
+
+
+.author{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30rpx;
+  margin-top: 50rpx;
+  color: #5e5eae
+}
+

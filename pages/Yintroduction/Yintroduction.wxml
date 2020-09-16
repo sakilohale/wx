@@ -1,0 +1,177 @@
+<view class="name">{{YI.appointment.username}}</view>
+
+
+
+<view class="contentArea"  bindtouchmove="hiddenComment">
+<view class="up">
+  <view class="content">
+    {{YI.appointment.content}}
+  </view>
+  <view class="delete" bindtap="deleteyueba" wx:if="{{can_delete}}">
+    <image src="/image/delete.png">
+    </image>
+  
+
+  </view>
+    
+</view>
+
+
+<view class="down">
+
+    
+<view class="promisetime">
+  {{YI.appointment.time}}
+</view>
+
+
+
+
+
+<view class="mix">
+        
+  <view class="comment" bindtap="showCommentInput" data-type='1'>
+    <image  src='/image/comment.png'></image>
+</view>
+
+
+<view class="join" wx-if="{{!canjoin}}" bindtap="join">
+    
+    <image src='/image/joinnot.png'>
+
+    </image>
+</view>
+
+
+<view class="join" wx-if="{{canjoin}}" bindtap="quit">
+    
+    <image src='/image/join.png'>
+
+    </image>
+</view>
+
+
+</view>
+
+</view>
+</view>
+
+
+
+<!--ping lun qu-->
+
+
+<view class='user-comment'>
+           
+
+
+    <!--评论列表渲染-->
+    <view class='comment-item' 
+          wx:for="{{YI.commentResponseList}}" 
+          wx:key="commentId">
+          <!--item为-commentList
+         左侧为头像--> 
+      <view class='left'>
+        <view class='user-image'>
+          <image src='{{item.comment.icon}}'></image>
+        </view>
+      </view>
+         <!--右侧为昵称，评论，再评论，时间标识-->
+      <view class='right'>
+        
+        <view class='comment-name right-item'>
+          <!--昵称-->
+            <view>{{item.comment.username}}</view>
+        
+        </view>
+
+        <!--内容-->
+        <view class='content right-item'>
+          {{item.comment.content}}
+        </view>
+
+
+         
+        <view class='create_at right-item'>
+            <!--发表时间-->
+          <view>{{item.comment.gmtCreate}}</view>
+
+            <!--再评论-->
+          <view class='comment-icon'>
+            <image src='/image/comment.png' 
+              bindtap='showCommentInput' 
+              data-commentId="{{item.comment.commentId}}"
+               
+              data-replyUserId="{{item.comment.accountId}}"
+              data-type='2'
+              ></image>
+          </view>
+        </view>
+
+
+       
+            <view class='comment-user-wall' 
+                  wx:if='{{item.replyList.length > 0}}'>
+
+              
+
+              <view class='comment-user-container' 
+                    wx:for="{{item.replyList}}" 
+                    wx:key="replyId" 
+                    wx:for-item="sub">
+
+                  <view class='comment-wall-item' 
+                        wx:if="{{sub.content}}" 
+                         bindtap="{{deleteComment}}">
+
+                        <view class='comment-user-container'>
+                          <view class="comment-user inline-item">
+                            {{sub.username}}：
+                          </view>
+
+                          <view class='inline-item'>{{sub.content}}</view>
+                          
+                        </view>
+                    </view>
+
+                
+              </view>                    
+            </view>
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+<view class="gmtCreate">
+ <view>{{YI.appointment.gmtCreate}}</view>
+</view>
+
+
+
+
+
+
+ <!--评论输入窗口-->
+ <view class='comment-input-container' wx:if="{{showCommentInput}}">
+    <textarea 
+        maxlength="1024"
+        placeholder="评论" 
+        auto-focus 
+        cursor-spacing="15"
+        fixed="true"
+        auto-height 
+        bindinput='getCommentContent'></textarea>
+    <view class='send-button' bindtap='postComment'><view>发送</view></view>
+  </view>
+
+  <!--加入人数-->
+<view class='joincontainer'>
+    <view class="text">{{join_number}}</view>
+    
+   
+    
+  </view>
+  <!--假如人数-->

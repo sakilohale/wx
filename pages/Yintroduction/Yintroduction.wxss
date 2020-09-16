@@ -1,0 +1,359 @@
+Page{
+  background: #A1FFCE;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.name{
+font-size: 40rpx;
+font-style: normal;
+float: left;
+color: black;
+margin-left: 30rpx;
+margin-top: 20rpx;
+margin-bottom: 20rpx;
+}
+
+
+.contentArea{
+
+display: flex;
+flex-direction: column;
+margin: auto;
+margin-top: 50rpx;
+border: grey 5rpx solid;
+width: 700rpx;
+height: 350rpx;
+border-radius: 50rpx;
+
+}
+.up{
+width: 100%;
+height: 70%;
+display: flex;
+border-bottom: grey 5rpx solid;
+margin: auto;
+
+
+}
+.down{
+width: 100%;
+margin: auto;
+display: flex;
+height: 30%;
+
+}
+.content{
+
+word-break: break-all;
+ width: 500rpx;
+ height: 100%;
+font-size:30rpx;
+margin-top: 20rpx;
+margin-left: 20rpx;
+
+}
+.delete{
+
+float:right;
+margin-top:20rpx; 
+margin-left: 50rpx;
+width: 50rpx;
+height: 50rpx;
+
+}
+
+.delete image{
+width: 100%;
+height: 100%;
+}
+.mix{
+
+display: flex;
+margin-left: 30rpx;
+width: 40%;
+
+
+}
+.promisetime{
+    width: 60%;
+color: black;
+font-size: 30rpx;
+float: left;
+
+}
+
+.gmtCreate{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25rpx;
+  margin-top: 50rpx;
+  color: gainsboro;
+}
+.commentcontainer{
+ display: flex;
+ flex-direction: column;
+
+}
+
+.comment{
+
+
+margin-left:50rpx;
+margin-top: 15rpx;
+
+}
+.join{
+
+  margin-left: 50rpx;
+
+margin-top: 15rpx;
+}
+.comment image{
+
+    width:60rpx;
+    height: 60rpx;
+
+
+}
+.join image{
+
+    width: 60rpx;
+    height: 60rpx;
+}
+.comment-input-container{
+    position:fixed;
+    bottom: 0rpx;
+    z-index:100;
+    width: 100%;
+    height: 200prx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10rpx;
+  }
+  
+  .comment-input-container textarea{
+    width: 100%;
+    margin-left: 20rpx;
+    border-bottom-style:solid;
+    border-width:1rpx;
+    margin-right: 20rpx;
+    padding-bottom: 15rpx;
+    font: 30rpx;
+    font-weight: 200;
+    margin-bottom: 20rpx;
+    padding-top: 17rpx;
+  }
+  
+  .comment-input-container .send-button{
+    width: 130rpx;
+    height: 70rpx;
+    font-size: 30rpx;
+    background: #359E6E;
+    color: white;
+    margin-right: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 30rpx;}
+    
+
+
+
+
+
+
+
+
+
+
+
+    /** 用户评论内容 **/
+  .user-comment{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+   
+  }
+  
+  .user-comment .comment-item{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40rpx;
+    border-top-style:solid;
+    border-width:1rpx;
+    border-color: #E8E8E8;
+    padding-top: 20rpx;
+
+
+  }
+  
+  .comment-item .left{
+    width: 15%;
+  }
+  
+  .comment-item .right{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 20rpx;
+  }
+  
+  .comment-item .content{
+    font-size: 35rpx;
+  }
+  
+  .user-image image{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 40rpx;
+  }
+  
+  .right .create_at{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: darkgray;
+    font-size: 25rpx;
+    margin-top: 5rpx;
+    align-items: center;
+  }
+  
+  .comment-icon image{
+    width: 40rpx;
+    height: 40rpx;
+  }
+  
+  
+  .right .comment-name{
+    color: #0061b2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .comment-name .letter-image{
+    width: 40rpx;
+    height: 40rpx;
+  }
+  
+  .right .right-item{
+    margin-bottom: 10rpx;
+  }
+  
+  .right .reply-comment{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+ 
+    margin-top: 10rpx;
+    padding: 15rpx;
+  }
+  
+  .reply-comment .reply-container{
+    display: inline;
+  }
+  
+  .reply-comment .reply-item{
+    font-size: 35rpx;
+    font-weight: 200;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .reply-item .reply-user{
+    color: white;
+    font-style: italic;
+  }
+  
+   
+  
+  /** 新的评论css **/
+  
+  .comment-user-container{
+    font-size: 30rpx;
+  
+  
+
+    padding: 10rpx;
+  }
+  
+  .qipao{
+    width: 0;
+    height: 0;
+    border-right: 20rpx solid white;
+    border-bottom: 20rpx solid WhiteSmoke;
+    border-left: 20rpx solid white;
+    margin-left: 20rpx;
+  }
+  
+  .inline-item{
+    display: inline;
+  }
+  
+  .comment-wall-item .comment-user-container{
+    display: inline;
+  }
+  
+  .comment-user-container image{
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 5rpx;
+    border-radius:20rpx;
+  }
+  
+  
+  
+  .comment-user{
+    color: black;
+    font-style: italic;
+  }
+  
+  
+  .share-user-button .button{
+    background: none !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 30rpx;
+    color: #FF7F00;
+  }
+  
+  .button::after{
+    border: none;
+  }
+
+
+  /*人数组件*/
+  .joincontainer {
+    position: fixed;
+    right: 18rpx;
+    bottom: 100rpx;
+    z-index: 100;
+    width: 120rpx;
+    height: 120rpx;
+    background: linear-gradient(225deg, #c1f7cf, #a2d0ae);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 120rpx;
+  }
+  /* 实现文本居中：设置其line-height等于其height*/
+  .joincontainer.text{
+    position: absolute;
+    top:20rpx;
+    color: black;
+    font-size: 50rpx;
+    
+  }
+  

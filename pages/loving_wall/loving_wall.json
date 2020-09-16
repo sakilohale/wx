@@ -1,0 +1,6 @@
+{
+
+  "usingComponents": {"messagebar":"../../components/messagebar/messagebar/"},
+  "navigationBarBackgroundColor": "#359E6E"
+
+}

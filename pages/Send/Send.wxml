@@ -1,0 +1,74 @@
+<view class='post-container'>
+    <!--上半部分输入文本及添加图片-->   
+      <view class='form'>
+    <!--输入文本-->
+      <view class='input'>
+          <textarea 
+            maxlength="1024"
+            value='{{copyData}}'
+            class='textarea-content'
+            placeholder="你想对她/他说。。。。"    
+            bindinput="getTextContent"></textarea>
+        </view>
+        <!--添加图片-->
+        
+
+
+         <view class='image-form'>
+          <view class="uploadimg" bindtap="getimage">
+            <image src="/image/ablum.png"></image>
+          </view>
+      </view>
+
+  
+
+    <view class="imglist">
+    <view wx:for="{{imglist}}" wx:for-item="img"  class="showimg" >
+      <image src="{{img}}" data-src="{{img}}" class="showimg" bindtap="previewimg" >
+      </image>
+     </view>
+    </view>
+    </view>
+      <!--下半部分填写主题和标签等-->
+    <view class='middle'>
+        <!--主题-->
+      <view class='location'>
+        <view class='like-word'>主题</view>
+        <input class='like-content' 
+               placeholder="表白" 
+               bindinput="getTitle"></input>
+              </view>
+  
+        <!--心情-->
+      <view class='location'>
+        <view class='like-word'>心情</view>
+        <input class='like-content' 
+               placeholder="此时你的...（选填）" 
+               bindinput="getMood"></input>
+      </view>
+      
+    <view class="section">
+      <view class="section__title">是否展示个人信息</view>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          当前选择：{{array[index]}}
+        </view>
+      </picker>
+    </view>
+
+
+
+
+    </view>
+
+
+
+
+
+    
+
+      <view class='button-container'>
+        <button bindtap='post' disabled='{{!canPost}}'> 发表 </button>
+      </view>
+    
+    </view>
